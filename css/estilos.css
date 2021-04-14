@@ -3,18 +3,72 @@
 /* Christiam Guerra */
 
 body {
-	margin: 0;
+	background-image: url("../img/fondo.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-blend-mode: darken luminosity;
+	margin: auto;
 	padding: 0;
+}
+
+/* BORDER BOX: que los bloques tengan de w/h exactamente lo que queremos */
+
+* {
+	box-sizing: border-box;
+}
+
+.content {
+	background-color: hsla(0,0%,0%,0.74);
+	padding: 0px;
+	margin: 0;
+}
+
+.titulodisco {
+	background-color: hsla(355,57%,35%,0.88);
+	color: #D9D8D0;
+	text-align: center;
+	align-items: center;
+	height: 100px;
+}
+
+
+.artista {
+	background-color: hsla(355,57%,35%,0.88);
+	color: #D9D8D0;
+	text-align: center;
+	align-items: center;
+	height: 100px;
+}	
+
+
+.portada {
+	background-color: #403A38;
+	padding: 0;
+	margin: 0;
+}
+
+
+.titulocancion {
+	background-color: hsla(60,4%,69%,0.80);
+	color: #000000;
 }
 
 
 
-/* estillo a todas las columnas a mismo tiempo*/
+
+
+
+
+
+
+
+/* Estillo a todas las columnas al mismo tiempo*/
 
 [class*="col-"] {
 	float: left;
 	padding: 15px;
-	border: 5px solid blue;
 }
 
 
@@ -28,15 +82,64 @@ body {
 
 
 
+
+
 /* ---------------- MEDIA QUERIES -----------------*/
 
 
 /* Extra Small / Telefonos pequeños de menos de 600px */
 
 @media only screen and (max-width: 600px) {
-	.encabezado {
-		background-color: #F00034;
+	
+	.content {
+		padding: 10px;
+		margin: 0;
 	}
+	
+	img {
+		width: 100%;
+		display: block;
+		margin: auto;
+	}
+	
+	
+	.titulodisco {
+		float: left;
+		margin: 5px 0px 5px 0px;
+	}
+	
+	
+	.artista {
+		float: right;
+		margin: 5px 0px 5px 0px;
+	}
+	
+	
+	.portada {
+		width: 100%;
+		margin: 20px 0 0 0;
+	}
+	
+	
+	.titulocancion {
+		text-align: center;
+		width: 100%;
+		height: 100px;
+		margin: 8px 0px 8px 0px;
+		display: flow-root;
+	}
+
+	
+	.contenedorlistado {
+		width: 100%;
+		margin: 20px 0px 50px 0px;
+		text-align: center;
+		align-content: center;
+		display: flow-root;
+	}
+	
+	
+	
 	
 	.col-1 { width: 8.33%;}
 	.col-2 { width: 16.66%;}
@@ -58,6 +161,55 @@ body {
 
 @media only screen and (min-width: 601px) {
 
+	.content {
+		padding: 10px;
+		margin: 0;
+	}
+	
+	img {
+		width: 100%;
+		display: block;
+		margin: auto;
+	}
+	
+	
+	.titulodisco {
+		float: left;
+		margin: 5px 0px 5px 0px;
+	}
+	
+	
+	.artista {
+		float: right;
+		margin: 5px 0px 5px 0px;
+	}
+	
+	
+	.portada {
+		width: 100%;
+		margin: 20px 0 0 0;
+	}
+	
+	
+	.titulocancion {
+		text-align: center;
+		width: 100%;
+		height: 100px;
+		margin: 8px 0px 8px 0px;
+		display: flow-root;
+	}
+
+	
+	.contenedorlistado {
+		width: 100%;
+		margin: 20px 0px 50px 0px;
+		text-align: center;
+		align-content: center;
+		display: flow-root;
+	}
+	
+	
+	
 	.col-sm-1 { width: 8.33%;}
 	.col-sm-2 { width: 16.66%;}
 	.col-sm-3 { width: 25%;}
@@ -77,16 +229,66 @@ body {
 /* MEDIUM DEVICES */
 
 @media only screen and (min-width: 768px) {
-	.encabezado {
-		background-color: #F0EF00;
+	
+	.content {
+		padding: 10px;
+		margin: 0;
 	}
+	
+	img {
+		width: 70%;
+		display: block;
+		margin: auto;
+		align-items: center;
+		padding: 20px 0 20px 0;
+	}
+	
+	.titulodisco {
+		float: left;
+		margin: 0px 10px 0px 0px;
+		display: flow-root;
+	}
+	
+	
+	.artista {
+		float: right;
+		margin: 0px 0px 0px 10px;
+		display: flow-root;
+	}
+	
+	
+	.portada {
+		width: 100%;
+		margin: 20px 0px 0px 0px;
+	}
+	
+	
+	
+	.titulocancion {
+		text-align: center;
+		width: 100%;
+		height: 100px;
+		margin: 10px 10px 10px 10px;
+		display: flow-root;
+	}
+
+	
+	.contenedorlistado {
+		width: 100%;
+		margin: 40px 0px 50px 0px;
+		text-align: center;
+		align-content: center;
+		display: flow-root;
+	}
+	
+
 	
 	.col-md-1 { width: 8.33%;}
 	.col-md-2 { width: 16.66%;}
 	.col-md-3 { width: 25%;}
 	.col-md-4 { width: 33.33%;}
 	.col-md-5 { width: 41.66%;}
-	.col-md-6 { width: 50%;}
+	.col-md-6 { width: 47%;}
 	.col-md-7 { width: 58.31%;}
 	.col-md-8 { width: 66.64%;}
 	.col-md-9 { width: 75%;}
@@ -101,12 +303,77 @@ body {
 
 @media only screen and (min-width: 992px) {
 	
+	.content {
+		padding: 30px;
+		margin: 0;
+	}
+	
+	
+	img {
+		width: 100%;
+		display: block;
+		margin: auto;
+		align-items: center;
+		padding: 20px 10px 20px 10px;
+	}
+	
+	
+	
+	.portada {
+		width: 100%;
+		margin: 20px 0 0 0;
+	}
+	
+	.artista {
+		float: left;
+		margin: 10px 0px 10px 0px;
+	}
+	
+	.titulodisco {
+		float: left;
+		margin: 10px 0px 10px 0px;
+	}
+	
+	.izquierda {
+		width: 50%;
+		height: auto;
+		float: left;
+	}
+	
+	.derecha {
+		width: 50%;
+		height: auto;
+		float: right;
+		padding: 10px 20px 0px 20px;
+		margin: 0;
+
+	}
+	
+	.titulocancion {
+		text-align: center;
+		width: 100%;
+		height: 100px;;
+		margin: 10px 10px 10px 10px;
+		display: flow-root;
+	}
+
+	
+	.contenedorlistado {
+		width: 100%;
+		margin: 40px 0px 50px 0px;
+		text-align: center;
+		align-content: center;
+		display: flow-root;
+	}
+	
+	
+	
 	.col-lg-1 { width: 8.33%;}
 	.col-lg-2 { width: 16.66%;}
 	.col-lg-3 { width: 25%;}
-	.col-lg-4 { width: 33.33%;}
+	.col-lg-4 { width: 33%;}
 	.col-lg-5 { width: 41.66%;}
-	.col-lg-6 { width: 50%;}
+	.col-lg-6 { width: 47%;}
 	.col-lg-7 { width: 58.31%;}
 	.col-lg-8 { width: 66.64%;}
 	.col-lg-9 { width: 75%;}
@@ -119,15 +386,79 @@ body {
 
 
 /* EXTRA LARGE DEVICES */
+
 @media only screen and (min-width: 1200px) {
-	.encabezado {
-		background-color: #4197FF;
+	
+	.content {
+		padding: 30px;
+		margin: 0;
 	}
+	
+	
+	img {
+		width: 90%;
+		display: block;
+		margin: auto;
+		align-items: center;
+		padding: 20px 0px 20px 0px;
+	}
+	
+	
+	
+	.portada {
+		width: 100%;
+		margin: 20px 0 0 0;
+		
+	}
+	
+	.artista {
+		float: left;
+		margin: 10px 0px 10px 0px;
+	}
+	
+	.titulodisco {
+		float: left;
+		margin: 10px 0px 10px 0px;
+	}
+	
+	.izquierda {
+		width: 40%;
+		height: auto;
+		float: left;
+	}
+	
+	.derecha {
+		width: 60%;
+		height: auto;
+		float: right;
+		padding: 10px 20px 0px 20px;
+		margin: 0;
+
+	}
+	
+	.titulocancion {
+		text-align: center;
+		width: 100%;
+		height: 100px;;
+		margin: 10px 10px 10px 10px;
+		display: flow-root;
+	}
+
+	
+	.contenedorlistado {
+		width: 100%;
+		margin: 40px 0px 50px 0px;
+		text-align: center;
+		align-content: center;
+		display: flow-root;
+	}
+	
+	
 	
 	.col-xl-1 { width: 8.33%;}
 	.col-xl-2 { width: 16.66%;}
 	.col-xl-3 { width: 25%;}
-	.col-xl-4 { width: 33.33%;}
+	.col-xl-4 { width: 31%;}
 	.col-xl-5 { width: 41.66%;}
 	.col-xl-6 { width: 50%;}
 	.col-xl-7 { width: 58.31%;}
@@ -138,3 +469,4 @@ body {
 	.col-xl-12 { width: 100%;}
 
 }
+
